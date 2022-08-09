@@ -2,18 +2,22 @@
 #include "main.h"
 
 /**
- * print_op - function to check which specifier to print
- * @format: string being passed
- * @print_arr: array of struct ops
- * @list: list of arguments to print
- * Return: numb of char to be printed
- */
+* print_op - function to check which specifier to print
+* @format: string being passed
+* @print_arr: array of struct ops
+* @list: list of arguments to print
+* Return: numb of char to be printed
+*/
+
 int print_op(const char *format, fmt_t *print_arr, va_list list)
+
 {
 	char a;
+
 	int count = 0, b = 0, c = 0;
 
 	a = format[b];
+
 	while (a != '\0')
 	{
 		if (a == '%')
@@ -44,13 +48,14 @@ int print_op(const char *format, fmt_t *print_arr, va_list list)
 }
 
 /**
- * _printf - prints output according to format
- * @format: string being passed
- * Return: char to be printed
- */
+* _printf - prints output according to format
+* @format: string being passed
+* Return: char to be printed
+*/
 int _printf(const char *format, ...)
 {
 	va_list list;
+
 	int a = 0;
 
 	fmt_t ops[] = {
@@ -66,7 +71,6 @@ int _printf(const char *format, ...)
 		{"R", _rot13},
 		{NULL, NULL}
 	};
-
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
