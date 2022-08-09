@@ -53,7 +53,7 @@ output : The dog jumped 7 times! -C
 * **get_unsigned.c**:
   * int _ui(va_list unsign) - unsigned int print to stdout
 
-* **holberton.h**: header file
+* **main.h**: header file
 
 * **man_3_printf**: _printf man page
 
