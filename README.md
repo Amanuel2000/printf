@@ -53,7 +53,7 @@ output : The dog jumped 7 times! -C
 * **get_unsigned.c**:
   * int _ui(va_list unsign) - unsigned int print to stdout
 
-* **holberton.h**: header file
+* **main.h**: header file
 
 * **man_3_printf**: _printf man page
 
@@ -65,4 +65,4 @@ output : The dog jumped 7 times! -C
 Our program does not handle buffer handling, flag characters, field width, precision, or length modifiers.
 
 ### Authors
-Mitali Sengupta & Omar Contreras
+Amanuel Fenta Dejen & Anania Bahru
