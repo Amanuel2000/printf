@@ -1,14 +1,16 @@
 #ifndef MAIN_H
-
 #define MAIN_H
 
+<<<<<<< HEAD
 #include <stdarg.h>
 
 #include <stdio.h>
 
+=======
+>>>>>>> 3421155098218c4b1c2295f006a2d0dfe65ba9fa
 #include <unistd.h>
-
-
+#include <stdlib.h>
+#include <stdarg.h>
 
 #define UNUSED(x) (void)(x)
 
@@ -39,6 +41,7 @@
 
 
 /**
+<<<<<<< HEAD
 
  * struct fmt - Struct op
 
@@ -52,8 +55,20 @@
 
 struct fmt
 
+=======
+* struct convert - defines a structure for symbols and functions
+* @sym: The operator
+* @f: The function associated
+*/
+struct convert
+>>>>>>> 3421155098218c4b1c2295f006a2d0dfe65ba9fa
 {
+	char *sym;
+	int (*f)(va_list);
+};
+typedef struct convert conver_t;
 
+<<<<<<< HEAD
 	char fmt;
 
 	int (*fn)(va_list, char[], int, int, int, int);
@@ -229,5 +244,31 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
 
+=======
+/*Main functions*/
+int parser(const char *format, conver_t f_list[], va_list arg_list);
+int _printf(const char *format, ...);
+int _write_char(char);
+int print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int print_integer(va_list);
+int print_number(va_list);
+int print_binary(va_list);
+int print_reversed(va_list arg);
+int rot13(va_list);
+int unsigned_integer(va_list);
+int print_octal(va_list list);
+int print_hex(va_list list);
+int print_heX(va_list list);
+
+
+/*Helper functions*/
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
+int print_unsgined_number(unsigned int);
+>>>>>>> 3421155098218c4b1c2295f006a2d0dfe65ba9fa
 
 #endif /* MAIN_H */
